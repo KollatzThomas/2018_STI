@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>epidat – Forschungsplattform für jüdische Grabsteinepigraphik</title>
+
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+
+        <!-- styles for included libraries -->
+
+        <!-- chartist -->
+        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+        <!-- unite gallery -->
+        <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+
+
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+
+
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+
+        <!-- js needed in head -->
+
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step">
+                <h4><strong>2018-08-02</strong> | STI </h4>
+                <h4><strong>Digitale Geisteswissenschaften – Epigraphik digital </strong></h4>
+                <h1 class="down-100">epidat</h1>
+                <h2 class="red up-25">Forschungsplattform für jüdische Grabsteinepigraphik</h2>
+                <h5 class="down-100">
+                    <strong>Präsentation</strong>
+                    <a href=" https://kollatzthomas.github.io/20180802_STI"
+                        title="View the presentation online">
+                        https://kollatzthomas.github.io/20180802_STI</a>
+                </h5>
+                <h5>
+                    <strong><a href="http://orcid.org/0000-0003-1904-1841">Thomas
+                        Kollatz</a></strong> | <img src="resources/img/Twitter_bird_logo_2012.svg"
+                        alt="Twitter" class="twitter-icon" />
+                    <a href="https://twitter.com/kol_t" title="Thomas Kollatz on Twitter">@kol_t</a>
+                    | <img src="resources/img/Octicons-mark-github.svg" alt="Twitter"
+                        class="gh-icon" />
+                    <a href="https://github.com/kollatzthomas/" title="Thomas Kollatz on GitHub"
+                        >KollatzThomas</a> | <a href="https://creativecommons.org/licenses/by/4.0/"
+                        >CC-BY 4.0</a>
+                    <br />Steinheim-Institut für deutsch-jüdische Geschichte, Essen </h5>
+            </div>
+            <div class="step">
+                <h2 class="red">Geschichte und Umfang</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five">
+                            <li>entwickelt seit 2002</li>
+                            <li>online seit 2006</li>
+                            <li>kontinuierlich projektbegleitend weiterentwickelt</li>
+                        </ul>
+                    </div>
+                    <div class="six columns">
+                        <ul class="line-height-one-five">
+                            <li><span class="dotted">189</span> digitale Editionen historischer
+                                jüdischer Friedhöfe</li>
+                            <li><span class="dotted">34.500 Inschriften</span></li>
+                            <li>66.000 Bilddigitalisate</li>
+                        </ul>
+                    </div>
+                </div>
+                <figure class="mfp-lightbox row">
+                    <img
+                        src="https://chart.googleapis.com/chart?cht=bvg&amp;chs=900x180&amp;chd=t2:5490,9965,14391,18127,21554,22279,24112,26380,28963,31087,33395,34064,35385|4,21,64,77,105,110,125,135,145,157,174,181,189&amp;chxr=0,2006,2018|1,0,40000|2,0,200,25&amp;chxt=x,y,r&amp;chds=0,40000,0,200&amp;chco=800000,003971&amp;chtt=epidat+2006-2018&amp;chm=N,000000,0,-1,8|N,000000,1,-1,8&amp;chdl=Grabmale|Korpora&amp;chdlp=t"
+                        alt="googleChart" />
+                </figure>
+                <div class="down-20 centered"><p class="x-small"><a
+                            href="http://steinheim-institut.de/cgi-bin/epidat?info=peranno"
+                            >http://steinheim-institut.de/cgi-bin/epidat?info=peranno</a></p></div>
+            </div>
+            <div class="step">
+                <div class="row">
+                    <div class="mfp-lightbox six columns">
+                        <h2 class="red">Raum – Topograpie</h2>
+                        <figure><a href="resources/img/map.png"><img src="resources/img/map.png"
+                                 /></a></figure>
+                        <ul class="line-height-one-five small">
+                            <li>Deutschland [173]</li>
+                            <li>Litauen [4]</li>
+                            <li>Niederlande [7]</li>
+                            <li>Tschechische Republik [5]</li>
+                        </ul>
+                    </div>
+                    <div class="six columns">
+                        <h2 class="red">Zeit – Chronologie</h2>
+                        <figure class="mfp-lightbox">
+                            <a href="resources/img/middleages.png"><img
+                                    src="resources/img/middleages.png" /></a>
+                        </figure>
+                    </div>
+                    <div class="six columns">
+                        <p class="small">Vom 11<sup>ten</sup> bis zum 20<sup>sten</sup> Jahrhundert.
+                            Zur Zeit 1.100 <span class="dotted">datierte</span> mittelalterliche
+                            Inschriften aus sieben Gemeinden, darunter: </p>
+                    </div>
+                    <div class="six columns">
+                        <ul class="line-height-one-five small">
+                            <li>שו״ם | Schum:<ul>
+                                    <li>Speyer</li>
+                                    <li>Worms</li>
+                                    <li>Mainz</li>
+                                </ul>
+                            </li>
+                            <li>Frankfurt</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="x-small"><a
+                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=map&amp;lang=en"
+                            >http://steinheim-institut.de/cgi-bin/epidat?info=map</a><br /><a
+                            href="http://www.steinheim-institut.de/cgi-bin/epidat?suche=*&amp;function=searchall&amp;lang=de&amp;check=2&amp;sm=AND&amp;wo=ed&amp;beg=1050&amp;end=1519"
+                            >http://steinheim-institut.de/cgi-bin/epidat?suche=*&amp;function=searchall&amp;lang=de&amp;check=2&amp;sm=AND&amp;wo=ed&amp;beg=1050&amp;end=1519</a></p>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Entwicklung <code>epidat</code></h2>
+                <table class="line-height-one-five small">
+                    <tr>
+                        <th>wann</th>
+                        <th>was und wer</th>
+                    </tr>
+                    <tr>
+                        <td>2002-2006</td>
+                        <td>Grundstruktur und -funktionalität, Eingabemasken und Übersetzungsroutine
+                            für strukturierte Texterfassung im Rahmen der Erfassung des
+                            aschkenasischen Friedhofs Hamburg-Altona, Königstraße (6000 Objekte/1000
+                            Fragmente) (Thomas Kollatz, Dan Bondy, Désirée Schostak, Inna
+                            Goudz)</td>
+
+                    </tr>
+                    <tr>
+                        <td>2006</td>
+                        <td>Onlinegang von Anfang an unter offener Lizenz: <a
+                                href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                                Attribution (CC BY 4.0)</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>2006-2018</td>
+                        <td>Zahlreiche epigraphische Erfassungsprojekte u.a. 50 Friedhöfe des Linken
+                            Niederrheins sowie 16 Friedhöfe des <a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=XA-DE-SL"
+                                >Saarlandes</a></td>
+                    </tr>
+                    <tr>
+                        <td>2011-2018</td>
+                        <td><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?info=geobrowser"
+                                >DARIAH-DE Geo-Browser</a> | <a
+                                href="https://app-juedische-orte.de.dariah.eu">WebApp Orte jüdischer
+                                Geschichte</a> | <a
+                                href="https://codingdavinci.de/projects/2014/poetic-relief.html"
+                                >Coding Da Vinci</a> | <a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-2338#f"
+                                >Bilddatenverwaltung über TextGridRep</a> | <a
+                                href="https://annotation.de.dariah.eu">DARIAH-DE annotation
+                                service</a> – aktuell: Kooperation zwischen epidat und Deutsche
+                            Inschriften Online (Dio) (Torsten Schrade, Max Gründtgens – ADWLM)</td>
+                    </tr>
+                    <tr>
+                        <td>2012-2015</td>
+                        <td><a href="https://wiki.de.dariah.eu/display/RIRPUB/RiR">Relationen im
+                                Raum</a>. Visualisierunen topographischer Klein(st)strukturen u.a.
+                                <a href="https://wiki.de.dariah.eu/display/RIRPUB/RiR-IBR_workshop"
+                                >Workshop zum Gedenkfriedhof Mainz</a> mit dem BMBF-Projekt <a
+                                href="http://www.spatialhumanities.de/ibr/startseite.html"
+                                >Inschriften im Bezugssystem im Raum</a> (IBR) – Kooperation mit <a
+                                href="https://wiki.de.dariah.eu/pages/viewpage.action?pageId=11469566"
+                                >Partnern</a> aus der historischen Bauforschung und
+                            Kunstgeschichte</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red centered">epidat – access options</h2>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" data-hash="/step-5/substep-1">
+                            <div class="six columns">
+                                <figure class="mfp-lightbox">
+                                    <a href="resources/img/epidat_access_options.png">
+                                        <img class="pull-up"
+                                            src="resources/img/epidat_access_options.png"
+                                            style="width:100%" />
+                                    </a><figcaption class="centered pull-up x-small">
+                                        <a
+                                            href="http://steinheim-institut.de/cgi-bin/epidat?lang=en#opt"
+                                            title="access options"
+                                            >http://steinheim-institut.de/cgi-bin/epidat</a>
+                                    </figcaption></figure>
+                            </div>
+                            <div class="six columns"><h3>Browse</h3>
+                                <ul class="even-left medium line-height-one-five">
+                                    
+                                    <li> chronologisch<ul>
+                                        <li>per Jahr</li>
+                                        <li>per Periode</li>
+                                    </ul>
+                                    </li>
+                                    <li> topographisch<ul class="line-height-one-five">
+                                        <li> Ort</li>
+                                        <li> Region </li>
+                                        <li> Karte</li>
+                                    </ul></li>
+                                    <li> visuell – über Bilder </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-5/substep-2">
+                            <div class="six columns"><figure class="mfp-lightbox row">
+                                <a href="resources/img/epidat_fulltext_search.png">
+                                    <img class="pull-up"
+                                        src="resources/img/epidat_fulltext_search.png"
+                                        style="width:100%" />
+                                </a><figcaption class="x-small"><a
+                                    href="http://www.steinheim-institut.de/cgi-bin/epidat?beg=&amp;end=&amp;sel=ad2%27aha%27alt%27ans%27ar1%27asc%27bme%27arl%27bay%27bee%27c02%27bng%27blr%27sb3%27bom%27gda%27gdn%27bnm%27bns%27bor%27hrs%27wal%27e51%27bri%27alm%27mad%27e01%27e99%27e02%27brh%27che%27c01%27dds%27din%27e03%27e04%27ap2%27ap1%27dor%27hoe%27c03%27du2%27du3%27du4%27du1%27du6%27du5%27erc%27erf%27wsw%27seg%27est%27wrd%27kuc%27ffb%27ffs%27ffh%27frd%27e05%27e52%27gsk%27gws%27e10%27e11%27e12%27e13%27e14%27hgl%27hgw%27hb2%27hbs%27hha%27hht%27hmr%27hdh%27hnn%27hns%27hlh%27blu%27hen%27hld%27hos%27hxf%27c05%27ils%27imr%27ihl%27iis%27irw%27igw%27e06%27jen%27e17%27e18%27e19%27kal%27e20%27kob%27kwr%27e21%27e22%27kre%27e23%27e42%27e43%27wnk%27lag%27lau%27lin%27mz2%27e25%27sb1%27msn%27min%27e26%27e31%27e30%27e29%27e27%27e28%27mlh%27mue%27e32%27e41%27sb5%27e33%27c06%27obh%27obl%27obw%27oer%27ora%27sb0%27l06%27pro%27que%27reg%27rex%27bbr%27e54%27e53%27e34%27e35%27rth%27oes%27sbs%27sb2%27sb9%27sb6%27l08%27srm%27e09%27e16%27smk%27st3%27e36%27sgb%27e58%27sdh%27sts%27spy%27sb7%27sb8%27sb4%27roe%27e37%27e44%27e60%27e61%27l07%27e38%27e39%27e40%27lom%27ver%27e07%27e08%27win%27wrm%27hdf&amp;sm=OR&amp;check=1&amp;wo=edueb&amp;suche=Jerusalem+*%E2%80%8E%E2%80%8Fירושלי%E2%80%8F%E2%80%8E%3F&amp;function=suche&amp;anzeige=ffb&amp;lang=en"
+                                    title="access options"
+                                    >http://steinheim-institut.de/cgi-bin/epidat</a></figcaption></figure>
+                            </div>
+                            <div class="six columns">
+                                <h3>>Zugang</strong></h3>
+                                <ul class="even-left medium line-height-one-five">
+                                    
+                                    <li> Volltextsuche </li>
+                                    <li> Indizes<ul class="line-height-one-five">
+                                        <li><a
+                                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=index&amp;lang=en&amp;anzeige=stm&amp;view=lfh#lfh"
+                                            >Künstler und Steinmetze</a></li>
+                                        <li><a
+                                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=index&amp;anzeige=memorials&amp;lang=en"
+                                            >Gedenksteine</a></li>
+                                        <li><a
+                                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=index&amp;anzeige=symbols&amp;lang=en"
+                                            >Symbole</a><ul class="line-height-one-five">
+                                                <li>Ornamente</li>
+                                                <li>Hauszeichen</li>
+                                            </ul></li>
+                                        <li>Personen</li>
+                                        <li>Sprachen</li>
+                                        <li>Wortformen und Abkürzungen</li>
+                                        <li>Wortlisten<ul class="line-height-one-five">
+                                            <li>Wortformen nur verwendet in Inschriften  für Männer | Frauen
+                                                etc.</li>
+                                        </ul></li>
+                                        <li>Zitate</li>
+                                        <li>Denkmalpflegerische Aktivitäten</li>
+                                    </ul></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-hash="/step-5/substep-3">
+                            <div class="six columns"><figure class="mfp-lightbox row">
+                                <a href="resources/img/lilies_Geo-Browser.png">
+                                    <img class="pull-up"
+                                        src="resources/img/lilies_Geo-Browser.png"
+                                        style="width:100%" />
+                                </a><figcaption class="x-small"><a
+                                    href="http://steinheim-institut.de/cgi-bin/epidat?lang=en#opt"
+                                    title="access options"
+                                    >http://steinheim-institut.de/cgi-bin/epidat</a></figcaption></figure>
+                            </div>
+                            <div class="six columns">
+                                <h3>Analyse  (Webdienste) </h3>
+                                <ul class="even-left medium line-height-one-five">
+                                    
+                                    <li> Visualisierung <ul class="line-height-one-five">
+                                        <li><a
+                                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=geobrowser&amp;lang=en"
+                                            >DARIAH-DE Geo-Browser für Raum-Zeit-Visualisierung</a></li>
+                                    </ul></li>
+                                    <li> Annotation<ul class="line-height-one-five">
+                                        <li><a
+                                            href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-3361"
+                                            >DARIAH-DE Annotation Service</a></li>
+                                    </ul></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Transdisziplinarität</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five">
+                            <li>Philologie<ul class="line-height-one-five">
+                                    <li>Textkonstitution</li>
+                                    <li>Übersetzung</li>
+                                    <li>Kommentierung</li>
+                                </ul></li>
+                            <li>Religionswissenschaft</li>
+
+                            <li>Geschichtswissenschaft<ul class="line-height-one-five">
+                                    <li>Mentalitätsgeschichte<ul>
+                                            <li>Longue durée</li>
+                                        </ul></li>
+                                    <li>Geneaologie</li>
+                                    <li>Onomastik</li>
+                                    <li>Gender Studies</li>
+                                </ul></li>
+                        </ul>
+                    </div>
+                    <div class="six columns">
+                        <figure class="mfp-lightbox"><a href="resources/img/2338_FN_0206040127.jpg"
+                                    ><img src="resources/img/2338_FN_0206040127.jpg"
+                                 /></a><figcaption class="x-small right">Hamburg, Königstraße  Foto:
+                                Bert Sommer</figcaption></figure>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Transdisziplinarität</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five">
+                            <li>Kunstwissenschaft<ul class="line-height-one-five">
+                                    <li> Symbole | Ornamente</li>
+                                    <li>Künstler</li>
+                                    <li>Steinmetze | Industriegeschichte</li>
+
+                                    <li>Material</li>
+                                </ul></li>
+                            <li>Denkmalpflege | Cultural Heritage<ul class="line-height-one-five">
+                                    <li>Monitoring</li>
+                                    <li>Instandhaltung, Restaurierung</li>
+                                </ul></li>
+                            <li> Cultural Heritage<ul class="line-height-one-five">
+                                    <li>Pädagogik</li>
+                                </ul></li>
+
+                        </ul>
+                    </div>
+                    <div class="six columns">
+                        <figure class="mfp-lightbox">
+                            <a href="resources/img/x_0409030214.jpg"><img
+                                    src="resources/img/x_0409030214.jpg" /></a><figcaption
+                                class="x-small right">Hamburg, Königstraße  Foto: Bert
+                                Sommer</figcaption>
+                        </figure>
+                        <figure class="mfp-lightbox"><a href="resources/img/x_0409030237.jpg"><img
+                                    src="resources/img/x_0409030237.jpg" /></a><figcaption
+                                class="x-small right">Hamburg, Königstraße  Foto: Bert
+                                Sommer</figcaption></figure>
+                    </div>
+                </div>
+            </div>
+           
+            <!--<div class="step">
+                <h2 class="red">Blumen und Schuhe</h2>
+                <h3>Beispiele</h3>
+            </div>-->
+            <!--<div class="step">
+                <h2 class="red">Wormser Lilien</h2>
+                <!-\- <h3 class="red >Beispiele</h3> -\->
+                <h3>Ein einzigartiges florales Symbol "im Heiligen Sand" – Worms</h3>
+                <div class="mfp-lightbox row">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="resources/img/lilie_1218_wrm-103.png" title="wrm-103"><img
+                                        src="resources/img/lilie_1218_wrm-103.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/lilie_before_1290_wrm-423.png"
+                                    title="wrm-423"><img
+                                        src="resources/img/lilie_before_1290_wrm-423.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/lilie_1296_wrm-999.png" title="wrm-999"><img
+                                        src="resources/img/lilie_1296_wrm-999.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/lilie_1320_wrm-1090.png" title="wrm-1090"
+                                        ><img src="resources/img/lilie_1320_wrm-1090.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/lilie_1492_wrm-692.png" title="wrm-692"><img
+                                        src="resources/img/lilie_1492_wrm-692.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/lilie_1493_wrm-778.png" title="wrm-778"><img
+                                        src="resources/img/lilie_1493_wrm-778.png" /></a>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+                <table>
+                    <tr>
+                        <td>1218</td>
+                        <td>vor 1290</td>
+
+                        <td>1296</td>
+                        <td>1320</td>
+
+                        <td>1492</td>
+                        <td>1493</td>
+                    </tr>
+                    <tr class="small">
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=wrm-103"
+                                >wrm-103</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=wrm-423"
+                                >wrm-423</a></td>
+
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=wrm-999"
+                                >wrm-999</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-1090"
+                                >wrm-1090</a></td>
+
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=wrm-692"
+                                >wrm-692</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=wrm-778"
+                                >wrm-778</a></td>
+                    </tr>
+
+                    <tr class="x-small">
+                        <td>Schlomo ben Natan</td>
+                        <td>Channa bat Jehuda</td>
+
+                        <td>Juta bat Josef</td>
+                        <td>Meir ben Elieser</td>
+
+                        <td>Jachet bat Ascher Halevi</td>
+                        <td>Dolza bat Schmuel</td>
+                    </tr>
+                </table>
+            </div>-->
+            <!--<div class="step"><h2 class="red">Wormser Lilien</h2>
+                <div class="row">
+                    <div class="mfp-lightbox six columns">
+                        <a href="resources/img/lilies_Geo-Browser.png"><img
+                                src="resources/img/lilies_Geo-Browser.png" /></a>
+                    </div>
+                    <div class="six columns">
+                        <p class="line-height-one-five"> in Raum-Zeit-Visualisierung im
+                                <a href="">DARIAH-DE Geo-Browser</a>
+                        </p>
+                        <ul>
+                            <li>Ort</li>
+                            <li>Zeit</li>
+                            <li>Symbol</li>
+                            <li>Eigenname</li>
+                        </ul>
+                        <p class="x-small"> Michael Brocke: The lilies of Worms. In: Zutot 8 (2011),
+                            3-13 <br /><a
+                                href="http://steinheim-institut.de/cgi-bin/epidat?info=geobrowser"
+                                >http://steinheim-institut.de/cgi-bin/epidat?info=geobrowser</a>
+                        </p>
+                    </div>
+                </div></div>-->
+            <div class="step">
+                <h2 class="red">Perspektiven</h2>
+                <!--<p>on …</p>-->
+                <dl>
+                    <dt >Text</dt>
+                    <dd>Textkonstitution | Edition</dd>
+                    <dt >Bild</dt>
+                    <dd>Symbole | Ornamente | Dekoration </dd>
+                    <dt >Inschriftenträger (Objekte)</dt>
+                    <dd>Form | Gestalt | Material</dd>
+                    <dt >Relationen</dt>
+                    <dd>Intertextualität</dd>
+                    <dd>Interkulturalität</dd>
+                    <dd>Räumliche Relationen zwischen Objekten</dd>
+                    <dd>Grabstein ist Teile einer Reihe | eines Feldes | einer Sektion | des
+                        Friedhofs</dd>
+                </dl></div>
+            <div class="step">
+                <h2 class="red">Beispiele</h2>
+            </div>
+            <div class="step">
+                <h2 class="red">Mainz, Gedenkfriedhof (mz1-2203)</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <blockquote class="right medium">‎‏זה קבר של הרב ר׳ מאיר בר אברהם הכהן הזקן
+                            הנהרג על יחוד השם במ״א לפרט כ״ז בסיון ביום שנשרף בית הכנסת ונקרעו סיפרי
+                            תורה מנוחתו כבוד‏‎ </blockquote>
+                        <figure class="mfp-lightbox even-right"><a
+                                href="resources/img/2203_mz1_LDA-2008-074.png"><img
+                                    src="resources/img/2203_mz1_LDA-2008-074.png" /></a></figure><p
+                            class="x-small right up-25"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=mz1-2203"
+                                >mz1-2203 – foto LDA Mainz</a></p>
+                    </div><div class="six columns">
+                        <dl class="medium">
+                            <dt class="red">Name</dt>
+                            <dd>Meir b. Awraham HaCohen</dd>
+                            <dt class="red">Datum</dt>
+                            <dd>1281-06-15 | 27. Sivan 5041</dd>
+                            <dt class="red">Ereignis</dt>
+                            <dd>destruction of the synagogue and the torascrolls: ביום שנשרף בית
+                                הכנסת ונקרעו סיפרי תורה </dd>
+                            <dt class="red">Konzept</dt>
+                            <dd>הנהרג על יחוד השם</dd>
+                            <dt class="red">Dislokation</dt>
+                            <dd>Grabstein wurde von Arbeitern am 5. Juni 1899 im Keller des
+                                Gasthauses "Zur Stadt Mainz" in der Straße "Große Bleiche"
+                                gefunden</dd>
+
+                        </dl></div></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Hamburg-Altona, Königstraße (hha-2338)</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <figure class="mfp-lightbox"><a href="resources/img/2338_FN_0206040127.jpg"
+                                    ><img src="resources/img/2338_FN_0206040127.jpg"
+                             /></a></figure><p class="x-small right"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-2338"
+                                >hha-2338 – foto by Bert Sommer</a></p>
+                    </div><div class="six columns">
+                        <dl class="even-left medium">
+                            <dt class="red">Ornamente</dt>
+                            <dd>Palmette</dd>
+                            <dt class="red">Symbole</dt>
+                            <dd>magen david | Hammer</dd>
+                            <dt class="red">Name und Herkunft</dt>
+                            <dd>David Hammerschlag aus Hildesheim</dd>
+                            <dt class="red">Intertextualität</dt>
+                            <dd>Anspielungen auf den biblischen David</dd>
+                            <dd> 2 Sam. 15:30 דוד עלה במעלה </dd>
+                            <dd> 1 Kings 2.1 ויקרבו ימי דוד למות</dd>
+                        </dl></div></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Frankfurter Schuhe</h2>
+                <!-- <h3 class="red >Beispiele</h3> -->
+                <h3>Ein Frankfurter Hauszeichen wird zum Familiennamen</h3>
+                <div class="mfp-lightbox row">
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="resources/img/shoe_ffb-444.png" title="ffb-444"><img
+                                        src="resources/img/shoe_ffb-444.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-2057.png" title="ffb-2057"><img
+                                        src="resources/img/shoe_ffb-2057.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-55.png" title="ffb-55"><img
+                                        src="resources/img/shoe_ffb-55.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-1584.png" title="ffb-1584"><img
+                                        src="resources/img/shoe_ffb-1584.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-52.png" title="ffb-52"><img
+                                        src="resources/img/shoe_ffb-52.png" /></a>
+                            </td>
+                            <td>
+                                <a href="resources/img/shoe_ffb-1678.png" title="ffb-1678"><img
+                                        src="resources/img/shoe_ffb-1678.png" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <table>
+                    <tr>
+                        <td>1607</td>
+                        <td>1612</td>
+
+                        <td>1774</td>
+                        <td>1782</td>
+
+                        <td>1795</td>
+                        <td>1805</td>
+                    </tr>
+                    <tr class="small">
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-444"
+                                >ffb-444</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-2057"
+                                >ffb-2057</a></td>
+
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-55"
+                                >ffb-55</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-1584"
+                                >ffb-1584</a></td>
+
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-52"
+                                >ffb-52</a></td>
+                        <td><a href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-1678"
+                                >ffb-1678</a></td>
+                    </tr>
+
+                    <tr class="x-small">
+                        <td>Schlomo Schuh Grotwol</td>
+                        <td>Breinlen bat Schlomo</td>
+
+                        <td>Joswel ben Schlomo Schuh</td>
+                        <td>Schönle bat David Rapp</td>
+
+                        <td>Breinche bat Süskind Leidersdorf</td>
+                        <td>Gitle bat Izek ben Jaakow Hanau SeGaL</td>
+                    </tr>
+                </table>
+                <blockquote class="substep down-50 centered">… und illustriert 200 Jahre Schuhdesign
+                    – eingraviert in Grabmale</blockquote>
+            </div>
+            <div class="step">
+                <div class="centered">
+                    <h2 class="red">Herausforderung</h2>
+                    <blockquote class="down-50"><strong>Symbole und Ornamente</strong>, die auf
+                        jüdischen Grabmalen anzutreffen sind, ebenso wie <strong>Zitate</strong> aus
+                        Bibel, Traditionsliteratur und Liturgie, die in die Eulogien verflochten
+                        sind, die <strong>Materialien</strong> der Grabmale, der gravierte
+                            <strong>Schrifttyp</strong> etc. sind Phänomene und Elemente, die nicht
+                        nur im engen Rahmen der jüdischen Grabsteinepigraphik von Interesse sind <ul
+                            class="line-height-one-five down-50 justify">
+                            <li>Wie können mehr oder weniger zufällige, marginale Funde und
+                                Ergebnisse der jüdischen Grabepigraphik bekannt(er) gemacht
+                                werden?</li>
+                            <li> Wie können sie zu belastbaren <strong>Fakten</strong> und
+                                    <strong>Quellen</strong> benachbarter Wissensdomänen werden</li>
+                        </ul>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Forschungsdaten </h2>
+                <h3>Voraussetzungen</h3>
+                <table class="line-height-one-five medium">
+                    <tr>
+                        <td>Publikation unter freien und offenen Lizenzen </td>
+                        <td>Creative Commons Lizenz</td>
+                        <td><img src="resources/img/cc.png" style="width:4em" /></td>
+                    </tr>
+                    <tr>
+                        <td>Ausgabe in dokumentierten, system- und programmunabhängigen <span
+                                class="dotted">Standardformaten</span></td>
+                        <td>EpiDoc: TEI XML for epigraphic Documents</td>
+                        <td><img src="resources/img/icon_epidoc.jpg" style="width:3em;" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Bereitstellung über (maschinenlesbare) <span class="dotted"
+                                >Datenschnittstellen</span> – frei verfügbar</td>
+                        <td><a href="">How to harvest epidat records</a></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Normdaten und Thesauri </h2>
+                <table class="line-height-one-five medium">
+                    <tr>
+                        <td><a
+                                href="http://www.getty.edu/research/tools/vocabularies/aat/about.html"
+                                >Iconclass</a></td>
+                        <td>
+                            <q>a multilingual classification system for cultural content</q></td>
+                        <td>Symbol: Lilie </td>
+                        <td><a href="http://www.iconclass.org/rkd/25G41%28LILY%29/"
+                                    ><em>25G41(LILY)</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Arts and Architecture Thesaurus</a></td>
+                        <td>[<abbr>AAT</abbr>] <q>to improve access to information about art,
+                                architecture, and material culture</q>
+                        </td>
+                        <td>Objekt|Konzept: Schuh</td>
+                        <td><a
+                                href="http://www.getty.edu/vow/AATFullDisplay?find=shoe&amp;logic=AND&amp;note=&amp;subjectid=300046065">
+                                <em>300046065</em></a></td>
+                    </tr>
+                    <tr>
+                        <td><a
+                                href="http://www.getty.edu/research/tools/vocabularies/tgn/about.html"
+                                >Thesaurus of Geographic Names</a></td>
+                        <td><q>TGN is intended to aid cataloging, research, and discovery of art
+                                historical, archaeological, and other scholarly information.
+                            </q></td>
+                        <td>Ort: Frankfurt</td>
+                        <td>
+                            <a href="http://vocab.getty.edu/tgn/7005293">7005293</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://www.dnb.de/DE/Standardisierung/GND/gnd_node.html"
+                                >Gemeinsame Normdatei</a></td>
+                        <td><q>Die Gemeinsame Normdatei (GND) ist eine Normdatei für Personen,
+                                Körperschaften, Konferenzen, Geografika, Sachschlagwörter und
+                                Werktitel</q></td>
+                        <td>Person: Rothschild, Meyer Amschel</td>
+                        <td><a href="http://d-nb.info/gnd/11879132X">11879132X</a></td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red"> Epigraphic Documents in TEI XML </h2>
+                <h3>Standardformat</h3><blockquote class="medium"><code>EpiDoc</code> is an
+                    international, collaborative effort that provides <strong>guidelines</strong>
+                    and tools for encoding scholarly and educational editions of ancient documents.
+                    It uses a subset of the Text Encoding Initiative's standard for the
+                    representation of texts in digital form and was developed initially <strong>for
+                        the publication of digital editions of ancient
+                    inscriptions</strong></blockquote>
+                <p class="right x-small">see: <a href="https://sourceforge.net/p/epidoc/wiki/Home/"
+                        >https://sourceforge.net/p/epidoc/wiki/Home/</a></p>
+                <pre><code class="linenumbers js">&lt;profileDesc&gt;
+ &lt;particDesc&gt; &lt;!-- participation description --&gt;
+    &lt;listPerson&gt;
+        &lt;person xml:id="ffb-80-1" sex="1"&gt;
+            &lt;persName ref="http://d-nb.info/gnd/11879132X"&gt;
+             Meir Rothschild ben Anschel Rothschild
+            &lt;/persName&gt; &lt;death when="1812-09-19"/&gt; 
+        &lt;/person&gt;
+    &lt;/listPerson&gt;
+ &lt;/particDesc&gt;
+ &lt;langUsage&gt; &lt;language ident="he" usage="100"&gt;Hebrew&lt;/language&gt; &lt;/langUsage&gt;
+&lt;/profileDesc&gt;
+</code></pre>
+            </div>
+            <div class="step">
+                <h2 class="red">Linked Open Data – hin … </h2>
+                <div class="row">
+                    <div class="six columns">
+                        <div class="mfp-lightbox ">
+                            <a href="resources/img/linked_rothschild.png"><img
+                                    src="resources/img/linked_rothschild.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <h3 class="medium">Datenaggregation</h3>
+                        <div>
+                            <p class="line-height-one-five small"> Die GND-ID erlaubt
+                                    <em>effizient</em>, <em>dynamisch</em> und <em>in Echtzeit</em>
+                                Onlineresourcen zur Person zu aggregieren. </p>
+                        </div><div class="mfp-lightbox"><p><a
+                                    href="resources/img/linked_sources.png"><img
+                                        src="resources/img/linked_sources.png" style="width:10em"
+                                     /></a></p></div>
+                        <p class="x-small"><a
+                                href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb-80-1"
+                                >http://steinheim-institut.de/cgi-bin/epidat?id=ffb-80-1</a><br /><a
+                                href="http://steinheim-institut.de/daten/beacon.txt"
+                                >http://steinheim-institut.de/daten/beacon.txt</a></p>
+                    </div></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Linked Open Data – … und zurück</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <div class="mfp-lightbox ">
+                            <a href="resources/img/ddb.png"><img src="resources/img/ddb.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="six columns">
+                        <h3>Semantische Webtechnologien</h3>
+                        <div>
+                            <pre><code class="xml">
+<span class="subject-color">Subjekt</span>      <span class="predicate-color">Prädikat</span>       <span class="object-color">Objekt</span> .
+
+<span class="subject-color">epidat-ID</span>    <span class="predicate-color">sameAS</span>         <span class="object-color">GND-ID</span> .
+<span class="subject-color">ffb-80-1</span>     <span class="predicate-color">sameAS</span>         <span class="object-color">11879132X</span> .
+</code></pre><p
+                                class="x-small"><a
+                                    href="https://www.deutsche-digitale-bibliothek.de/entity/11879132X"
+                                    >https://deutsche-digitale-bibliothek.de/entity/11879132X</a></p>
+                        </div>
+                    </div></div>
+            </div>
+            <div class="step">
+                <h2 class="red">Epigraphische Datenbanken</h2>
+                <h3>Sharing Data: Die Projekte PEACE Portal und DARIAH-DE</h3>
+                <table class="x-small">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><a href="http://cds.library.brown.edu/projects/Inscriptions">IIP</a>
+                                – Inscriptions of Israel | Palestine</th>
+                            <th><a href="http://www.steinheim-institut.de/cgi-bin/epidat?lang=en"
+                                    >epidat</a> – Database of Jewish Epigraphy</th>
+                            <th><a href="http://www.inschriften.net">DIO</a> – Deutsche Inschriften
+                                Online</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>online</strong></td>
+                            <td><figure style="text-align:left;border:0;margin:0"><img
+                                        src="resources/img/IIP.png" style="width:20rem"
+                                 /></figure></td>
+                            <td><figure style="text-align:left;border:0;margin:0"><img
+                                        src="resources/img/epidat_whatisit.png" style="width:30rem"
+                                     /></figure></td>
+                            <td><figure style="text-align:left;border:0;margin:0"><img
+                                        src="resources/img/dio.png" style="width:30rem"
+                                 /></figure></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Inschriften</strong></td>
+                            <td><a
+                                    href="http://library.brown.edu/search/solr_pub/iip/?q=*%3A*&amp;start=0&amp;rows=0&amp;indent=on&amp;facet=on&amp;facet.field=religion&amp;wt=json"
+                                    >3.634</a></td>
+                            <td><a href="http://steinheim-institut.de/cgi-bin/epidat?info=peranno"
+                                    >33.065</a></td>
+                            <td><a title="ca.">ca. 18.000</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zeit</strong></td>
+                            <td>500 BCE - 640 CE</td>
+                            <td>Mitte 11<sup>tes</sup> - 20<sup>tes</sup> Jahrhundert</td>
+                            <td>500-1650 CE</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Raum</strong></td>
+                            <td>Israel | Palestina</td>
+                            <td>Deutschland | Niederlande | Tschechische Republik | Litauen</td>
+                            <td>Deutschland | Österreich | Südtirol</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Genre</strong></td>
+                            <td>Verschiedene</td>
+                            <td>Grabinschriften</td>
+                            <td>Verschiedene </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Format</strong></td>
+                            <td colspan="3" class="centered">EpiDoc: TEI XML for Epigraphic
+                                Documents</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 
+            <div class="step">
+                <h2 class="centered red">Zugang zu den Sammlungen</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <figure class="mfp-lightbox">
+                            <a href="resources/img/epidat_access_options.png"><img
+                                    src="resources/img/epidat_access_options.png" />
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="six columns">
+                        <h3>Zugangsoptionen</h3>
+                        <ol class="line-height-one-five medium">
+                            <li>chronologisch </li>
+                            <li>regional</li>
+                            <li>kartenbasiert</li>
+                            <li>indexbasiert</li>
+                            <li>bildbasiert</li>
+                            <li>Volltextsuche</li>
+                            <li>Visualisierungen</li>
+                            <li>Tabellen und Listen</li>
+                            <li>Schnittstellen (maschinenlesbar)</li>
+                            <li> … nach Bedarf … </li>
+                        </ol>
+                        <p class="small centered"><a
+                                href="http://steinheim-institut.de/cgi-bin/epidat?lang=en"
+                                >http://steinheim-institut.de/cgi-bin/epidat</a></p>
+                    </div>
+                </div>
+            </div>
+            -->
+            <!-- 
+            <div class="step">
+                <div class="mfp-lightbox twelve columns">
+                    <p>
+                        <a href="resources/img/rufus_pollock.jpg">
+                            <img src="resources/img/rufus_pollock.jpg" />
+                        </a>
+                    </p>
+                </div>
+                <div><p class="x-small right">source: <a href="https://twitter.com/rufuspollock"
+                    >Rufus Pollock</a></p></div>
+            </div>
+            -->
+            <!--<div class="step">
+                <h2 class="red">Linked Open Data</h2><!-\- A generic webservice to extract RDF statements from XML resources. -\->
+                <h3>DARIAH-DE USE-CASE: CIDOC-Datenmodellierung</h3><ul class="line-height-one-five">
+                    <li>Vom beschriebenen Standardformat <code>EpiDoc – TEI XML</code>
+                    </li>
+                    <li>über den offenen <code>xTripels webservice</code></li>
+                    <li>zu semantischen RDF-statements (<code>Triples</code>)</li>
+                </ul>
+                <div class="row">
+                    <div class="twelve columns" style="position: relative; top: -35px;">
+                        <svg style="position: relative; z-index: 1; margin-bottom: -50px;"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns="http://www.w3.org/2000/svg" width="100%" height="237pt"
+                            viewBox="0.00 0.00 1232.00 237.00">
+                            <g id="graph0" class="graph"
+                                transform="scale(1 1) rotate(0) translate(4 233)">
+                                <title>d1e255</title>
+                                <polygon style="fill:white;stroke:white;"
+                                    points="-4,4 -4,-233 1228,-233 1228,4 -4,4"/>
+                                <!-\- A1 -\->
+                                <g id="node1" class="node">
+                                    <title>A1</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="938,-116 854,-116 854,-82 938,-82 938,-116"/>
+                                    <text text-anchor="middle" x="896" y="-103"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E55_Type:</text>
+                                    <text text-anchor="middle" x="896" y="-90"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-\- &quot;Mann&quot; -\->
+                                <g id="node3" class="node">
+                                    <title>"Mann"</title>
+                                    <text text-anchor="middle" x="1150" y="-127.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Mann"</text>
+                                </g>
+                                <!-\- A1&#45;&gt;&quot;Mann&quot; -\->
+                                <g id="edge2" class="edge">
+                                    <title>A1-&gt;"Mann"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M939,-104C987,-110 1066,-120 1113,-126"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1112.7,-129.488 1123,-127 1113.4,-122.522 1112.7,-129.488"/>
+                                    <text text-anchor="middle" x="1023" y="-121.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-\- A3 -\->
+                                <g id="node4" class="node">
+                                    <title>A3</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="593,-200 497,-200 497,-166 593,-166 593,-200"/>
+                                    <text text-anchor="middle" x="545" y="-187"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E21_Person:</text>
+                                    <text text-anchor="middle" x="545" y="-174"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-\- A4 -\->
+                                <g id="node6" class="node">
+                                    <title>A4</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="938,-172 854,-172 854,-138 938,-138 938,-172"/>
+                                    <text text-anchor="middle" x="896" y="-159"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E55_Type:</text>
+                                    <text text-anchor="middle" x="896" y="-146"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-\- A3&#45;&gt;A4 -\->
+                                <g id="edge4" class="edge">
+                                    <title>A3-&gt;A4</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-177C623,-173 660,-169 693,-166 745,-161 803,-158 843,-157"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="843.398,-160.478 853,-156 842.701,-153.512 843.398,-160.478"/>
+                                    <text text-anchor="middle" x="752" y="-169.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P2_has_type</text>
+                                </g>
+                                <!-\- A5 -\->
+                                <g id="node8" class="node">
+                                    <title>A5</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="970,-228 822,-228 822,-194 970,-194 970,-228"/>
+                                    <text text-anchor="middle" x="896" y="-215"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E82_Actor_Appellation:</text>
+                                    <text text-anchor="middle" x="896" y="-202"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-\- A3&#45;&gt;A5 -\->
+                                <g id="edge6" class="edge">
+                                    <title>A3-&gt;A5</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-187C650,-192 743,-199 812,-204"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="811.701,-207.488 822,-205 812.398,-200.522 811.701,-207.488"/>
+                                    <text text-anchor="middle" x="752" y="-205.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131_is_identified_by</text>
+                                </g>
+                                <!-\- A4&#45;&gt;&quot;Mann&quot; -\->
+                                <g id="edge22" class="edge">
+                                    <title>A4-&gt;"Mann"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M939,-151C987,-146 1066,-138 1113,-134"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1113.4,-137.478 1123,-133 1112.7,-130.512 1113.4,-137.478"/>
+                                    <text text-anchor="middle" x="1023" y="-149.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-\- &quot;Jehuda&quot; -\->
+                                <g id="node19" class="node">
+                                    <title>"Jehuda"</title>
+                                    <text text-anchor="middle" x="1150" y="-208.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Jehuda"</text>
+                                </g>
+                                <!-\- A5&#45;&gt;&quot;Jehuda&quot; -\->
+                                <g id="edge16" class="edge">
+                                    <title>A5-&gt;"Jehuda"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M970,-211C1017,-211 1074,-211 1112,-211"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1112,-214.5 1122,-211 1112,-207.5 1112,-214.5"/>
+                                    <text text-anchor="middle" x="1023" y="-214.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-\- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13 -\->
+                                <g id="node9" class="node">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13</title>
+                                    <a
+                                        xlink:href="http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13"
+                                        xlink:title="crm:E19_Physical_Object:\nhttp://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13">
+                                        <polygon style="fill:none;stroke:black;"
+                                            points="289,-143 1,-143 1,-109 289,-109 289,-143"/>
+                                        <text text-anchor="middle" x="145" y="-130"
+                                            style="font-family:Times New Roman;font-size:10.00px;fill:blue;"
+                                            >crm:E19_Physical_Object:</text>
+                                        <text text-anchor="middle" x="145" y="-117"
+                                            style="font-family:Times New Roman;font-size:10.00px;fill:blue;"
+                                            >http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13</text>
+                                    </a>
+                                </g>
+                                <!-\- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;A3 -\->
+                                <g id="edge12" class="edge">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;A3</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M264,-143C338,-153 428,-166 486,-175"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="485.701,-178.488 496,-176 486.398,-171.522 485.701,-178.488"/>
+                                    <text text-anchor="middle" x="349" y="-163.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131i_identifies</text>
+                                </g>
+                                <!-\- &quot;Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]&quot; -\->
+                                <g id="node11" class="node">
+                                    <title>"Breite, hochrechteckige Sandsteinstele mit
+                                        geradem\nAbschluss. Das ver [...]"</title>
+                                    <text text-anchor="middle" x="545" y="-130"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Breite, hochrechteckige Sandsteinstele mit geradem</text>
+                                    <text text-anchor="middle" x="545" y="-117"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >Abschluss. Das ver [...]"</text>
+                                </g>
+                                <!-\- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;&quot;Breite, hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das ver [...]&quot; -\->
+                                <g id="edge8" class="edge">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;"Breite,
+                                        hochrechteckige Sandsteinstele mit geradem\nAbschluss. Das
+                                        ver [...]"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M290,-126C325,-126 363,-126 398,-126"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="398,-129.5 408,-126 398,-122.5 398,-129.5"/>
+                                    <text text-anchor="middle" x="349" y="-129.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                                <!-\- A0 -\->
+                                <g id="node13" class="node">
+                                    <title>A0</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="593,-86 497,-86 497,-52 593,-52 593,-86"/>
+                                    <text text-anchor="middle" x="545" y="-73"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E21_Person:</text>
+                                    <text text-anchor="middle" x="545" y="-60"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-\- http://www.steinheim&#45;institut.de/cgi&#45;bin/epidat?id=aha&#45;13&#45;&gt;A0 -\->
+                                <g id="edge10" class="edge">
+                                    <title>http://www.steinheim-institut.de/cgi-bin/epidat?id=aha-13-&gt;A0</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M264,-109C338,-99 428,-86 486,-77"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="486.398,-80.4778 496,-76 485.701,-73.5125 486.398,-80.4778"/>
+                                    <text text-anchor="middle" x="349" y="-104.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131i_identifies</text>
+                                </g>
+                                <!-\- A0&#45;&gt;A1 -\->
+                                <g id="edge18" class="edge">
+                                    <title>A0-&gt;A1</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-73C659,-79 775,-89 843,-94"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="842.701,-97.4875 853,-95 843.398,-90.5222 842.701,-97.4875"/>
+                                    <text text-anchor="middle" x="752" y="-93.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P2_has_type</text>
+                                </g>
+                                <!-\- A2 -\->
+                                <g id="node15" class="node">
+                                    <title>A2</title>
+                                    <polygon style="fill:none;stroke:black;"
+                                        points="970,-60 822,-60 822,-26 970,-26 970,-60"/>
+                                    <text text-anchor="middle" x="896" y="-47"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:E82_Actor_Appellation:</text>
+                                    <text text-anchor="middle" x="896" y="-34"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                    > </text>
+                                </g>
+                                <!-\- A0&#45;&gt;A2 -\->
+                                <g id="edge20" class="edge">
+                                    <title>A0-&gt;A2</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M594,-62C622,-58 660,-54 693,-51 732,-47 775,-45 812,-44"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="812,-47.5001 822,-44 812,-40.5001 812,-47.5001"/>
+                                    <text text-anchor="middle" x="752" y="-54.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P131_is_identified_by</text>
+                                </g>
+                                <!-\- &quot;Elieser ben Josef Hakohen&quot; -\->
+                                <g id="node17" class="node">
+                                    <title>"Elieser ben Josef Hakohen"</title>
+                                    <text text-anchor="middle" x="1150" y="-40.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >"Elieser ben Josef Hakohen"</text>
+                                </g>
+                                <!-\- A2&#45;&gt;&quot;Elieser ben Josef Hakohen&quot; -\->
+                                <g id="edge14" class="edge">
+                                    <title>A2-&gt;"Elieser ben Josef Hakohen"</title>
+                                    <path style="fill:none;stroke:blue;"
+                                        d="M970,-43C1000,-43 1035,-43 1066,-43"/>
+                                    <polygon style="fill:blue;stroke:blue;"
+                                        points="1066,-46.5001 1076,-43 1066,-39.5001 1066,-46.5001"/>
+                                    <text text-anchor="middle" x="1023" y="-46.5"
+                                        style="font-family:Times New Roman;font-size:10.00px;"
+                                        >crm:P3_has_note</text>
+                                </g>
+                            </g>
+                        </svg>
+                        <h5 class="x-small">
+                            <strong>demo:</strong>
+                            <a href="http://xtriples.spatialhumanities.de"
+                                title="Go to XTriples Website"> http://xtriples.spatialhumanities.de </a>
+                            <br />
+                            <strong>code: </strong>
+                            <a href="https://github.com/spatialhumanities/xtriples"
+                                >https://github.com/spatialhumanities/xtriples</a>
+                            <br /><strong>presentation</strong>: <a
+                                href="https://orcid.org/0000-0002-0953-2818">Torsten Schrade</a>
+                            (Digitale Akademie Mainz):<br /><a
+                                href="https://digicademy.github.io/dariah-workshop2016-xtriples-cidoc/#/step-1"
+                                >CIDOC-CRM Modellierung epigraphischer Fachdaten mit dem XTriples
+                                Webservice - Werkstattbericht aus dem DARIAH UseCase 6.1
+                                (Steinheim-Institut &amp; ADWLM)</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>-->
+            <div class="step">
+                <div class="centered">
+                    <h1 class="red">F I N I S</h1>
+                    <h2>סוף דבר הכל נשמע</h2>
+                </div>
+            </div>
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- unite gallery -->
+        <script type="text/javascript" src="vendor/unitegallery/js/unitegallery.min.js"></script>
+        <script type="text/javascript" src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+        <script type="text/javascript" src="resources/js/unite.gallery.js"></script>
+        <!-- chartist -->
+        <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+        <script src="resources/js/chartist.charts.js"></script>
+        <!-- codemirror -->
+        <script src="vendor/codemirror/lib/codemirror.js"></script>
+        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+        <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- swiper -->
+        <script src="vendor/swiper/swiper.min.js"></script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true
+        });
+    </script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+    </body>
+</html>
